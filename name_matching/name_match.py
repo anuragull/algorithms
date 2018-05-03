@@ -17,9 +17,9 @@ class NameMatch(object):
                 self.all_names.add(line.strip('\n'))
         # set metaphone
 
-    for names in self.all_names:
-        first, second = doublemetaphone(names)
-        self.metaphone_set.add(first + second)
+        for names in self.all_names:
+            first, second = doublemetaphone(names)
+            self.metaphone_set.add(first + second)
 
     def direct_match(self, name):
         if name in self.all_names:
