@@ -1,11 +1,14 @@
 import argparse
 from metaphone import doublemetaphone
 import difflib
+import edit_dist
 import heapq
 
 male_name = 'data/male.txt'
 female_name = 'data/female.txt'
 all_words = 'data/english_word_ntk.txt'
+
+
 
 class NameMatch(object):
     def __init__(self):
@@ -18,7 +21,6 @@ class NameMatch(object):
             for line in fread.readlines():
                 self.all_names.add(line.strip('\n'))
         # set metaphone
-
         for names in self.all_names:
             first, second = doublemetaphone(names)
             self.metaphone_dict[first + second] = names
@@ -29,8 +31,13 @@ class NameMatch(object):
         return False
 
     def edit_dist(self, name):
+	h = []
 	# create a heap with the distances for the word
-        pass
+	for db_name in self.all_names:
+	    heapq.heappush(h, (edit_dist.get_edit_dist(name, db_name), db_name))
+        top_result = heapq.nsmallest(10, h)
+        results = [n for c,n in top_result]
+	return results
 
     def metaphone_match(self, name):
         test_f, test_s = doublemetaphone(name)
@@ -54,6 +61,7 @@ def driver():
         print("Name %s matches the metaphone database %s" % (args.Name, name_match.metaphone_match(args.Name)))
     if args.Mode == 3:
         print("Name %s matches list %s" % (args.Name, str(name_match.close_match(args.Name))))
-
+    if args.Mode == 4:
+        print("Name %s edit-dist matches %s" % (args.Name, str(name_match.edit_dist(args.Name))))
 if __name__ == '__main__':
     driver()
