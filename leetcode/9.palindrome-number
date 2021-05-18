@@ -1,0 +1,15 @@
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+    # check for negative number
+        if x < 0:
+            return False
+        result = 0
+        x_leftover = abs(x)
+        # get each LSB
+        while x_leftover:
+            result = result * 10 + x_leftover % 10
+            x_leftover //= 10
+        # if results match 
+        if result == x:
+            return True
+        return False
