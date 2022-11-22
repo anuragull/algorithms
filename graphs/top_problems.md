@@ -4,8 +4,8 @@ DFS of Graph\
 Transitive Closure of a Graph\
 Union-Find\
 Detect Cycle using DSU\
-Number of Provinces\
-Find the number of islands\
+[x] Number of Provinces\
+[x] Find the number of islands\
 Detect cycle in an undirected graph\
 Hamiltonian Path\
 Prerequisite Tasks\
@@ -31,7 +31,7 @@ Neeman’s Shoes\
 Minimum Spanning Tree\
 Strongly Connected Components (Kosaraju’s Algo)\
 Bridge Edge in Graph\
-Flood Fill Algorithm\
+[x] Flood Fill Algorithm\
 Replace O’s with X’s\
 Shortest Prime Path\
 Word Search\
@@ -42,26 +42,26 @@ Minimum Cost Path\
 Strongly Connected Components (Tarjan’s Algo)\
 Articulation Point – I\
 Articulation Point – II\
-Alien Dictionary\
-Word Ladder I\
+[x] Alien Dictionary\
+[x] Word Ladder I\
 Word Ladder II\
-Find number of closed islands\
+[x] Find number of closed islands\
 Shortest Path by removing K walls\
 Find the String\
 
 
 ---------
-261. Graph Valid Tree\
-269. Alien Dictionary\
-277. Find the Celebrity\
-323. Number of Connected Components in an Undirected Graph\
-490. The Maze\
-499. The Maze III\
-505. The Maze II\
-631. Design Excel Sum Formula\
-1059. All Paths from Source Lead to Destination\
-1135. Connecting Cities With Minimum Cost\
-1136. Parallel Courses\
-1168. Optimize Water Distribution in a Village\
-1245. Tree Diameter\
-1548. The Most Similar Path in a Graph\
+261. Graph Valid Tree
+269. Alien Dictionary
+277. Find the Celebrity
+323. Number of Connected Components in an Undirected Graph
+490. The Maze
+499. The Maze III
+505. The Maze II
+631. Design Excel Sum Formula
+1059. All Paths from Source Lead to Destination
+1135. Connecting Cities With Minimum Cost
+1136. Parallel Courses
+1168. Optimize Water Distribution in a Village
+1245. Tree Diameter
+1548. The Most Similar Path in a Graph
